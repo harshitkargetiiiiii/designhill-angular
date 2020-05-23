@@ -1,0 +1,21 @@
+<h3>Checkout Summary</h3>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Sub total</th>
+    </tr>
+    <tr *ngFor="let product of items">
+        <td>{{product.product_data[0].product_name}}</td>
+        <td>{{product.product_data[0].sku_code}}</td>
+        <td><input type="number" [value]="product.quantity"></td>
+        <td>{{product.product_data[0].price}}</td>
+        <td>{{product.quantity * product.product_data[0].price}}</td>
+    </tr>
+    <tr>
+        <th>Grand Total</th>
+        <td>{{total}}</td>
+    </tr>
+</table>

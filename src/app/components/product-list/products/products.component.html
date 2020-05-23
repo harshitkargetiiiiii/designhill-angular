@@ -1,0 +1,16 @@
+<h3>Product List</h3>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Price</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{product.product_name}}</td>
+        <td>{{product.sku_code}}</td>
+        <td>{{product.price}}</td>
+        <td>
+            <button (click)="addProducts(product)">Add Product</button>
+        </td>
+    </tr>
+</table>
